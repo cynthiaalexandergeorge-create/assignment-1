@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>College Project Report - Cynthia Alexander</title>
+  <style>
+    @page {
+      size: A4;
+      margin: 22mm 20mm 22mm 20mm;
+      @bottom-right {
+        content: counter(page);
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Times New Roman', Times, serif;
+      color: #111827;
+      line-height: 1.65;
+      font-size: 12pt;
+      margin: 0;
+      padding: 0;
+      background: #ffffff;
+    }
+
+    .page-break {
+      page-break-before: always;
+    }
+
+    /* Cover Page */
+    .cover-page {
+      text-align: center;
+      padding-top: 15px;
+      min-height: 880px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      page-break-after: always;
+    }
+
+    .college-name {
+      font-size: 19pt;
+      font-weight: bold;
+      color: #0f172a;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 6px;
+    }
+
+    .college-sub {
+      font-size: 11pt;
+      color: #334155;
+      margin-bottom: 25px;
+    }
+
+    .report-title-box {
+      border-top: 2px solid #0f172a;
+      border-bottom: 2px solid #0f172a;
+      padding: 22px 10px;
+      margin: 35px 0;
+    }
+
+    .report-main-title {
+      font-size: 17pt;
+      font-weight: bold;
+      color: #0f172a;
+      line-height: 1.4;
+      text-transform: uppercase;
+      margin: 0;
+    }
+
+    .report-sub-title {
+      font-size: 11pt;
+      font-style: italic;
+      color: #475569;
+      margin-top: 8px;
+    }
+
+    .submission-text {
+      font-size: 11.5pt;
+      font-style: italic;
+      color: #334155;
+      line-height: 1.6;
+      margin: 20px 0;
+    }
+
+    .details-grid {
+      display: flex;
+      justify-content: space-between;
+      margin: 40px 0 20px 0;
+      text-align: left;
+    }
+
+    .details-col {
+      width: 48%;
+    }
+
+    .details-col h4 {
+      font-size: 11pt;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+      color: #0f172a;
+      border-bottom: 1px solid #cbd5e1;
+      padding-bottom: 4px;
+    }
+
+    .details-col p {
+      margin: 3px 0;
+      font-size: 11pt;
+    }
+
+    .academic-year {
+      font-size: 12pt;
+      font-weight: bold;
+      color: #0f172a;
+      margin-top: 30px;
+    }
+
+    /* Certificate & Declaration */
+    .cert-heading {
+      text-align: center;
+      font-size: 16pt;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 24px;
+      text-decoration: underline;
+    }
+
+    .cert-body {
+      font-size: 12pt;
+      line-height: 1.8;
+      text-align: justify;
+      margin-bottom: 40px;
+    }
+
+    .cert-signatures {
+      margin-top: 60px;
+      display: flex;
+      justify-content: space-between;
+      text-align: center;
+    }
+
+    .sign-box {
+      width: 45%;
+    }
+
+    .sign-line {
+      border-top: 1px solid #000000;
+      margin-top: 50px;
+      padding-top: 6px;
+      font-weight: bold;
+      font-size: 11pt;
+    }
+
+    /* Headings for Body Chapters */
+    h1.chapter-title {
+      font-size: 15pt;
+      font-weight: bold;
+      text-transform: uppercase;
+      border-bottom: 1.5px solid #000000;
+      padding-bottom: 6px;
+      margin-top: 25px;
+      margin-bottom: 15px;
+      color: #0f172a;
+    }
+
+    h2.section-heading {
+      font-size: 13pt;
+      font-weight: bold;
+      margin-top: 18px;
+      margin-bottom: 8px;
+      color: #1e293b;
+    }
+
+    h3.sub-section-heading {
+      font-size: 11.5pt;
+      font-weight: bold;
+      margin-top: 12px;
+      margin-bottom: 6px;
+      color: #334155;
+    }
+
+    p {
+      text-align: justify;
+      margin-bottom: 10px;
+      line-height: 1.65;
+    }
+
+    /* Academic Tables */
+    table.academic-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 14px 0 18px 0;
+      font-size: 10.5pt;
+    }
+
+    table.academic-table th, table.academic-table td {
+      border: 1px solid #334155;
+      padding: 8px 12px;
+      text-align: left;
+    }
+
+    table.academic-table th {
+      background-color: #f1f5f9;
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 9.5pt;
+    }
+
+    /* Code Blocks */
+    pre.code-block {
+      background: #f8fafc;
+      border: 1px solid #cbd5e1;
+      padding: 10px 14px;
+      font-family: 'Consolas', 'Courier New', monospace;
+      font-size: 9pt;
+      border-radius: 4px;
+      overflow-x: auto;
+      line-height: 1.45;
+      margin: 10px 0;
+    }
+
+    ul, ol {
+      margin: 6px 0 12px 24px;
+    }
+
+    li {
+      margin-bottom: 4px;
+    }
+
+    /* Info Table */
+    .metadata-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 14px 0;
+    }
+
+    .metadata-table td {
+      padding: 6px 10px;
+      border: 1px solid #cbd5e1;
+      font-size: 10.5pt;
+    }
+
+    .metadata-table td.label {
+      font-weight: bold;
+      width: 28%;
+      background: #f8fafc;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ================= COVER PAGE ================= -->
+  <div class="cover-page">
+    <div>
+      <div class="college-name">Jain College of Engineering &amp; Technology</div>
+      <div class="college-sub">Hubli, Karnataka – 580029<br>Department of Software Engineering / Computer Science &amp; Engineering</div>
+      
+      <div class="report-title-box">
+        <h1 class="report-main-title">Development and Cloud Deployment of a Modern Personal Portfolio, Resume, and Bio-Data Web Application</h1>
+        <div class="report-sub-title">Web Technology Laboratory Assignment 1 Report</div>
+      </div>
+
+      <div class="submission-text">
+        Submitted in partial fulfillment of the requirements for the evaluation of<br>
+        <strong>Web Technology Laboratory (Assignment 1)</strong><br>
+        Bachelor of Engineering in Software Engineering
+      </div>
+    </div>
+
+    <div>
+      <div class="details-grid">
+        <div class="details-col">
+          <h4>Submitted By:</h4>
+          <p><strong>Name:</strong> Cynthia Alexander</p>
+          <p><strong>Department:</strong> Software Engineering</p>
+          <p><strong>Institution:</strong> Jain College, Hubli</p>
+          <p><strong>Email:</strong> cyntalex@gmail.com</p>
+        </div>
+
+        <div class="details-col">
+          <h4>Under the Guidance of:</h4>
+          <p><strong>Project Guide / Faculty:</strong></p>
+          <p>Department of Computer Science &amp; Engineering</p>
+          <p>Jain College of Engineering, Hubli</p>
+          <p>Karnataka, India</p>
+        </div>
+      </div>
+
+      <div class="academic-year">
+        ACADEMIC YEAR: 2026 – 2027
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= CERTIFICATE OF APPROVAL ================= -->
+  <div class="page-break"></div>
+  <div style="padding-top: 30px;">
+    <div class="college-name" style="text-align: center; font-size: 16pt;">Jain College of Engineering &amp; Technology</div>
+    <div style="text-align: center; font-size: 11pt; color: #475569; margin-bottom: 35px;">Hubli, Karnataka<br>Department of Software Engineering</div>
+
+    <div class="cert-heading">Certificate of Evaluation</div>
+
+    <div class="cert-body">
+      This is to certify that the laboratory project work entitled <strong>"Development and Cloud Deployment of a Modern Personal Portfolio, Resume, and Bio-Data Web Application"</strong> is a bonafide work carried out by <strong>Cynthia Alexander</strong> in partial fulfillment for the evaluation of <strong>Web Technology Laboratory (Assignment 1)</strong> during the academic year 2026–2027.
+      <br><br>
+      The project has been reviewed, examined, and verified on the live production environment at <strong>https://assignment-1-topaz-alpha.vercel.app</strong> and is found to meet the prescribed academic curriculum standards.
+    </div>
+
+    <div class="cert-signatures">
+      <div class="sign-box">
+        <div class="sign-line">Signature of Project Guide</div>
+        <p style="font-size: 10pt; color: #475569; margin-top: 2px;">Faculty Advisor</p>
+      </div>
+      <div class="sign-box">
+        <div class="sign-line">Signature of Head of Department</div>
+        <p style="font-size: 10pt; color: #475569; margin-top: 2px;">Department of Software Engineering</p>
+      </div>
+    </div>
+
+    <div style="margin-top: 60px; display: flex; justify-content: space-between; text-align: center;">
+      <div class="sign-box">
+        <div class="sign-line">Internal Examiner</div>
+      </div>
+      <div class="sign-box">
+        <div class="sign-line">External Examiner</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= DECLARATION & ACKNOWLEDGEMENT ================= -->
+  <div class="page-break"></div>
+  <div style="padding-top: 20px;">
+    <div class="cert-heading">Declaration</div>
+    <p>
+      I, <strong>Cynthia Alexander</strong>, student of Bachelor of Engineering at Jain College, Hubli, hereby declare that the project work entitled <strong>"Development and Cloud Deployment of a Modern Personal Portfolio, Resume, and Bio-Data Web Application"</strong> submitted to the Department of Software Engineering is a record of original development work undertaken by me under the guidance of our esteemed faculty members.
+    </p>
+    <p>
+      The code, styling, visual assets, documentation, and cloud deployment published at <strong>https://assignment-1-topaz-alpha.vercel.app</strong> have been developed in adherence to academic integrity and ethical guidelines.
+    </p>
+
+    <div style="margin-top: 40px; display: flex; justify-content: space-between;">
+      <div>
+        <p><strong>Place:</strong> Hubli, Karnataka</p>
+        <p><strong>Date:</strong> 07 November 2026</p>
+      </div>
+      <div style="text-align: right;">
+        <p><strong>Cynthia Alexander</strong></p>
+        <p style="font-size: 10pt; color: #475569;">Candidate</p>
+      </div>
+    </div>
+
+    <div style="margin-top: 50px;">
+      <div class="cert-heading" style="margin-bottom: 16px;">Acknowledgement</div>
+      <p>
+        I would like to express my profound gratitude to our <strong>Project Guide and Faculty Members</strong> of the Department of Software Engineering, Jain College, for their invaluable guidance, encouragement, and insightful feedback throughout the duration of this web technology laboratory assignment.
+      </p>
+      <p>
+        I also extend my sincere appreciation to the <strong>Head of the Department</strong> and the <strong>Principal</strong> of Jain College of Engineering for providing the requisite laboratory infrastructure, computational facilities, and continuous academic support.
+      </p>
+    </div>
+  </div>
+
+  <!-- ================= TABLE OF CONTENTS & ABSTRACT ================= -->
+  <div class="page-break"></div>
+  <div style="padding-top: 20px;">
+    <div class="cert-heading">Abstract</div>
+    <p>
+      The rapid proliferation of web technologies has made interactive, responsive personal websites a standard requirement for computing professionals to present their academic credentials, research endeavors, and technical portfolios. This laboratory project encompasses the engineering, design enhancement, version-control integration, and cloud deployment of a multi-page personal web application for <strong>Cynthia Alexander</strong>.
+    </p>
+    <p>
+      Originating from baseline laboratory exercise specifications, the application was upgraded using clean semantic HTML5, modern CSS3 layout systems (Flexbox, CSS Grid, and custom design tokens), lightweight vanilla JavaScript for event handling, and pure Scalable Vector Graphics (SVG) icons to ensure high visual fidelity without platform-dependent emojis. The application was version-controlled using Git, published to GitHub, and hosted on the Vercel Edge Network via an automated Continuous Deployment (CD) pipeline.
+    </p>
+
+    <div style="margin-top: 35px;">
+      <div class="cert-heading" style="margin-bottom: 16px;">Table of Contents</div>
+      <table class="academic-table" style="font-size: 11pt;">
+        <thead>
+          <tr>
+            <th style="width: 15%;">Chapter</th>
+            <th>Title</th>
+            <th style="width: 15%; text-align: right;">Page No.</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Chapter 1</strong></td><td>Introduction &amp; Problem Statement</td><td style="text-align: right;">1</td></tr>
+          <tr><td><strong>Chapter 2</strong></td><td>System Requirements &amp; Architecture</td><td style="text-align: right;">2</td></tr>
+          <tr><td><strong>Chapter 3</strong></td><td>Web Page Modules &amp; Implementation Details</td><td style="text-align: right;">3</td></tr>
+          <tr><td><strong>Chapter 4</strong></td><td>Design Techniques &amp; SVG Engineering</td><td style="text-align: right;">4</td></tr>
+          <tr><td><strong>Chapter 5</strong></td><td>DevOps Pipeline, Testing &amp; Cloud Deployment</td><td style="text-align: right;">5</td></tr>
+          <tr><td><strong>Chapter 6</strong></td><td>Conclusion, Verification &amp; Future Scope</td><td style="text-align: right;">6</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ================= CHAPTER 1 ================= -->
+  <div class="page-break"></div>
+  <h1 class="chapter-title">Chapter 1: Introduction &amp; Problem Statement</h1>
+
+  <h2 class="section-heading">1.1 Background &amp; Motivation</h2>
+  <p>
+    As part of the academic curriculum for the Web Technology Laboratory course, students are tasked with understanding the fundamental trifecta of client-side web development: HyperText Markup Language (HTML) for document semantics, Cascading Style Sheets (CSS) for responsive layout presentation, and JavaScript for client-side interactivity.
+  </p>
+  <p>
+    While traditional laboratory exercises focus on isolated static HTML files, modern industry expectations require developers to demonstrate full-cycle competencies: semantic structure, responsive design across diverse viewports, version control discipline, and cloud hosting with automated continuous deployment.
+  </p>
+
+  <h2 class="section-heading">1.2 Problem Statement &amp; Objectives</h2>
+  <p>
+    The objective of Assignment 1 is to design and develop an authentic personal web application containing three core foundational components:
+  </p>
+  <ol>
+    <li><strong>Home Page:</strong> Introductory landing page presenting candidate identity, navigation links, and interactive engagement.</li>
+    <li><strong>Bio-Data Page:</strong> Structured tabular presentation of personal verification details, institutional declaration, and authentication block.</li>
+    <li><strong>Curriculum Vitae / Resume Page:</strong> Academic record, technical proficiencies, project portfolio, achievements, and co-curricular interests.</li>
+  </ol>
+  <p>
+    In addition to satisfying the laboratory reference requirements, the project was extended to include a dedicated <strong>About Me</strong> module and an interactive <strong>Contact Page</strong>, styled under a modern design system and deployed live on the public cloud.
+  </p>
+
+  <h2 class="section-heading">1.3 Project Deliverables &amp; Metadata</h2>
+  <table class="metadata-table">
+    <tr>
+      <td class="label">Project Title</td>
+      <td>Personal Portfolio, Resume &amp; Bio-Data Web Application</td>
+    </tr>
+    <tr>
+      <td class="label">Candidate Name</td>
+      <td>Cynthia Alexander</td>
+    </tr>
+    <tr>
+      <td class="label">Institution</td>
+      <td>Jain College of Engineering &amp; Technology, Hubli</td>
+    </tr>
+    <tr>
+      <td class="label">Live Vercel URL</td>
+      <td><strong>https://assignment-1-topaz-alpha.vercel.app</strong></td>
+    </tr>
+    <tr>
+      <td class="label">GitHub Repository</td>
+      <td><strong>https://github.com/cynthiaalexandergeorge-create/assignment-1</strong></td>
+    </tr>
+    <tr>
+      <td class="label">Deployment Branch</td>
+      <td><code>main</code> (Production Pipeline)</td>
+    </tr>
+  </table>
+
+  <!-- ================= CHAPTER 2 ================= -->
+  <div class="page-break"></div>
+  <h1 class="chapter-title">Chapter 2: System Requirements &amp; Architecture</h1>
+
+  <h2 class="section-heading">2.1 Hardware and Software Environment</h2>
+  <table class="academic-table">
+    <thead>
+      <tr>
+        <th style="width: 30%;">Category</th>
+        <th>Specification / Tool Used</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Operating System</strong></td>
+        <td>Microsoft Windows 11 (64-bit)</td>
+      </tr>
+      <tr>
+        <td><strong>Development Environment</strong></td>
+        <td>Antigravity Agentic IDE / Visual Studio Code</td>
+      </tr>
+      <tr>
+        <td><strong>Markup &amp; Styling</strong></td>
+        <td>HTML5, CSS3 (Vanilla, CSS Grid &amp; Flexbox, Design Tokens)</td>
+      </tr>
+      <tr>
+        <td><strong>Scripting Language</strong></td>
+        <td>ECMAScript 6 (JavaScript Vanilla)</td>
+      </tr>
+      <tr>
+        <td><strong>Vector Graphics</strong></td>
+        <td>W3C Scalable Vector Graphics (SVG 1.1 / 2.0)</td>
+      </tr>
+      <tr>
+        <td><strong>Version Control</strong></td>
+        <td>Git Distributed Version Control System (v2.55+)</td>
+      </tr>
+      <tr>
+        <td><strong>Remote Repository</strong></td>
+        <td>GitHub Cloud (Git over HTTPS / Personal Access Token)</td>
+      </tr>
+      <tr>
+        <td><strong>Hosting Platform</strong></td>
+        <td>Vercel Global Edge Network (Automated Webhook CI/CD)</td>
+      </tr>
+      <tr>
+        <td><strong>Target Browsers</strong></td>
+        <td>Google Chrome, Microsoft Edge, Mozilla Firefox, Safari</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2 class="section-heading">2.2 Architectural Flow</h2>
+  <p>
+    The web application follows a clean <strong>Single-Source Static Architecture (SSSA)</strong> with client-side routing between five discrete HTML pages sharing a unified stylesheet (<code>style.css</code>) and interactive logic script (<code>script.js</code>).
+  </p>
+  <pre class="code-block">
+[ Local Workspace (D:\assignment 1) ]
+  ├── index.html        (Home Showcase &amp; Hero Section)
+  ├── about.html        (Dedicated Profile &amp; Core Identity)
+  ├── resume.html       (Education Table, Skills, Projects, Achievements)
+  ├── biodata.html      (Personal Details Record &amp; Declaration)
+  ├── contact.html      (Contact Cards &amp; Interactive Message Form)
+  ├── style.css         (Design Tokens, Responsive Grid &amp; Media Queries)
+  ├── script.js         (DOM Event Listeners, Mobile Nav &amp; Form Handler)
+  └── assets/           (Vector Portraits &amp; Photography Assets)
+       ↓ (Git Commit &amp; Branch: main)
+[ GitHub Repository: cynthiaalexandergeorge-create/assignment-1 ]
+       ↓ (Automated Continuous Deployment Webhook)
+[ Vercel Global Edge CDN (assignment-1-topaz-alpha.vercel.app) ]
+  </pre>
+
+  <!-- ================= CHAPTER 3 ================= -->
+  <div class="page-break"></div>
+  <h1 class="chapter-title">Chapter 3: Web Page Modules &amp; Implementation</h1>
+
+  <h2 class="section-heading">3.1 Home Module (index.html)</h2>
+  <p>
+    The home page is engineered as the central showcase portal:
+  </p>
+  <ul>
+    <li><strong>Sticky Navigation Bar:</strong> Features the brand monogram badge (<code>C</code>), desktop navigation links, mobile hamburger trigger, and a highlighted call-to-action button (<code>Contact Me</code>).</li>
+    <li><strong>Hero Section:</strong> Incorporates an electric-lime tag (<code>Hello I Am</code>), high-contrast heading (<code>I'm Cynthia</code>), candidate introduction, and action triggers leading to the resume and contact pages.</li>
+    <li><strong>Rotating SVG Vector Badge:</strong> Utilizes an SVG <code>&lt;textPath&gt;</code> curving smoothly along a circular radius (<code>SOFTWARE ENGINEERING • CYNTHIA •</code>) executing continuous 360° keyframe animation around a high-resolution portrait.</li>
+    <li><strong>Obsidian Feature Ticker:</strong> A dark marquee banner with lime sparkle icons presenting primary engineering specializations.</li>
+  </ul>
+
+  <h2 class="section-heading">3.2 About Me Module (about.html)</h2>
+  <p>
+    Presents an authentic narrative of Cynthia Alexander's academic journey at Jain College, detailing her interest in distributed computing, machine learning, and clean software architecture. Includes structured capsule tags denoting core engineering attributes.
+  </p>
+
+  <h2 class="section-heading">3.3 Curriculum Vitae / Resume Module (resume.html)</h2>
+  <p>
+    Presents academic qualifications, technical proficiencies, and projects in an evaluated tabular format:
+  </p>
+  <table class="academic-table">
+    <thead>
+      <tr>
+        <th>Degree / Level</th>
+        <th>Institution</th>
+        <th>Passing Year</th>
+        <th>Percentage</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>B.E. (Software Engineering)</strong></td>
+        <td>Jain College of Engineering, Hubli</td>
+        <td>2026</td>
+        <td><strong>85%</strong></td>
+      </tr>
+      <tr>
+        <td><strong>PUC (12th Grade)</strong></td>
+        <td>Adarsh College</td>
+        <td>2022</td>
+        <td><strong>80%</strong></td>
+      </tr>
+      <tr>
+        <td><strong>SSLC (10th Grade)</strong></td>
+        <td>Government School</td>
+        <td>2020</td>
+        <td><strong>90%</strong></td>
+      </tr>
+    </tbody>
+  </table>
+  <p>
+    <strong>Project Highlights Documented:</strong>
+  </p>
+  <ul>
+    <li><em>Student Management System:</em> Database-driven portal for recording student performance metrics.</li>
+    <li><em>Food Waste Management System:</em> Web system connecting surplus food donors with distribution networks.</li>
+    <li><em>AI in Federated Learning:</em> Decentralized machine learning framework prioritizing data privacy.</li>
+  </ul>
+
+  <h2 class="section-heading">3.4 Bio-Data Module (biodata.html)</h2>
+  <p>
+    Formats official identification records: Full Name (<em>Cynthia Alexander</em>), Date of Birth (<em>01 January 2006</em>), Gender (<em>Female</em>), Nationality (<em>Indian</em>), Languages Known (<em>English, Kannada, Tamil, Hindi</em>), Residential Address (<em>Hubli, Karnataka</em>), formal legal declaration of truthfulness, and authentication signature block.
+  </p>
+
+  <h2 class="section-heading">3.5 Contact Module (contact.html)</h2>
+  <p>
+    Provides direct communication channels (Email, Telephone, Location, and Student Internship Status) alongside an interactive client-side form validating inputs and providing immediate submission feedback.
+  </p>
+
+  <!-- ================= CHAPTER 4 ================= -->
+  <div class="page-break"></div>
+  <h1 class="chapter-title">Chapter 4: Design Techniques &amp; SVG Engineering</h1>
+
+  <h2 class="section-heading">4.1 Elimination of Casual Emojis in Favor of SVG Vectors</h2>
+  <p>
+    A critical design enhancement introduced during development was the complete elimination of casual platform emojis. Emojis render inconsistently across operating systems and diminish professional credibility.
+  </p>
+  <p>
+    All icons were re-engineered using <strong>Scalable Vector Graphics (SVG)</strong> with uniform 24×24 coordinate viewBox geometry, 2px stroke width, rounded line-caps, and dynamic color inheritance via <code>currentColor</code>:
+  </p>
+  <pre class="code-block">
+&lt;!-- Example: Professional SVG Email Icon --&gt;
+&lt;svg width="18" height="18" viewBox="0 0 24 24" fill="none" 
+     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"&gt;
+  &lt;rect width="20" height="16" x="2" y="4" rx="2"/&gt;
+  &lt;path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/&gt;
+&lt;/svg&gt;
+  </pre>
+
+  <h2 class="section-heading">4.2 CSS Design Tokens &amp; Palette Architecture</h2>
+  <p>
+    To ensure visual cohesion, CSS custom properties were implemented across all components:
+  </p>
+  <ul>
+    <li><code>--primary: #ff5e62</code> (Coral / Terracotta accent for buttons, active links, and brand icons).</li>
+    <li><code>--accent-lime: #ccff00</code> (High-visibility electric lime for badges and rotating highlights).</li>
+    <li><code>--dark-bg: #090a0f</code> (Obsidian black for ticker banners and footer elements).</li>
+    <li><code>--text-main: #0f172a</code> &amp; <code>--text-muted: #64748b</code> (High-contrast WCAG 2.1 AA accessible typography).</li>
+  </ul>
+
+  <h2 class="section-heading">4.3 Responsive Viewport Strategy</h2>
+  <p>
+    The stylesheet implements progressive enhancement with fluid media queries:
+  </p>
+  <ul>
+    <li><strong>Desktop (&gt; 900px):</strong> Two-column CSS Grid layouts with generous spacing and visible horizontal navigation.</li>
+    <li><strong>Tablet (650px – 900px):</strong> Grid columns collapse to single-column centered layouts while maintaining card containment.</li>
+    <li><strong>Mobile (&lt; 650px):</strong> Navigation transitions to a clean slide-down menu toggled via JavaScript, tables receive horizontal scrolling wrappers, and typography scales appropriately.</li>
+  </ul>
+
+  <!-- ================= CHAPTER 5 ================= -->
+  <div class="page-break"></div>
+  <h1 class="chapter-title">Chapter 5: DevOps Pipeline, Testing &amp; Cloud Deployment</h1>
+
+  <h2 class="section-heading">5.1 Version Control with Git</h2>
+  <p>
+    The repository was initialized locally using Git. A <code>.gitignore</code> configuration was deployed to exclude cache files. Commits followed standard semantic versioning practices documenting structural and stylistic milestones:
+  </p>
+  <ul>
+    <li><code>Initial commit: Personal Website structure (Home, Bio-data, Resume)</code></li>
+    <li><code>Update personal details for Cynthia Alexander</code></li>
+    <li><code>Add modern Home, Navigation, About Me, and Contact pages</code></li>
+    <li><code>Replace casual emojis with professional SVG vector icons and photography</code></li>
+  </ul>
+
+  <h2 class="section-heading">5.2 GitHub and Vercel Continuous Deployment (CD)</h2>
+  <p>
+    The local repository was synchronized with the remote GitHub repository at <code>cynthiaalexandergeorge-create/assignment-1</code> on the <code>main</code> branch.
+  </p>
+  <p>
+    Vercel was integrated with the GitHub repository via automated deployment webhooks. Upon detecting any commit to the <code>main</code> branch, Vercel initiates an automated build, generates an optimized static deployment, assigns edge-cached SSL certificates, and updates the public production URL:
+  </p>
+  <div style="text-align: center; margin: 15px 0;">
+    <strong style="font-size: 13pt; color: #0f172a;">https://assignment-1-topaz-alpha.vercel.app</strong>
+  </div>
+
+  <h2 class="section-heading">5.3 Production Verification Audit</h2>
+  <p>
+    Automated HTTP requests were executed against the live Vercel production endpoints to verify status codes and asset delivery:
+  </p>
+  <table class="academic-table">
+    <thead>
+      <tr>
+        <th>Page Module</th>
+        <th>Public Endpoint Route</th>
+        <th>HTTP Status</th>
+        <th>Verification State</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Home</td>
+        <td><code>https://assignment-1-topaz-alpha.vercel.app/</code></td>
+        <td><strong>200 OK</strong></td>
+        <td>Verified live with all assets.</td>
+      </tr>
+      <tr>
+        <td>About Me</td>
+        <td><code>https://assignment-1-topaz-alpha.vercel.app/about.html</code></td>
+        <td><strong>200 OK</strong></td>
+        <td>Verified live with portrait.</td>
+      </tr>
+      <tr>
+        <td>Resume / CV</td>
+        <td><code>https://assignment-1-topaz-alpha.vercel.app/resume.html</code></td>
+        <td><strong>200 OK</strong></td>
+        <td>Verified live with qualifications table.</td>
+      </tr>
+      <tr>
+        <td>Bio-Data</td>
+        <td><code>https://assignment-1-topaz-alpha.vercel.app/biodata.html</code></td>
+        <td><strong>200 OK</strong></td>
+        <td>Verified live with declaration.</td>
+      </tr>
+      <tr>
+        <td>Contact</td>
+        <td><code>https://assignment-1-topaz-alpha.vercel.app/contact.html</code></td>
+        <td><strong>200 OK</strong></td>
+        <td>Verified live with interactive form.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- ================= CHAPTER 6 ================= -->
+  <div class="page-break"></div>
+  <h1 class="chapter-title">Chapter 6: Conclusion, Verification &amp; Future Scope</h1>
+
+  <h2 class="section-heading">6.1 Summary of Achievements</h2>
+  <p>
+    This laboratory project successfully achieved all pedagogical requirements specified in Assignment 1 while exceeding baseline criteria through professional UI/UX engineering:
+  </p>
+  <ol>
+    <li>Designed and implemented all required pages: <strong>Home</strong>, <strong>Bio-Data</strong>, and <strong>Resume</strong>, along with supplemental <strong>About Me</strong> and <strong>Contact</strong> modules.</li>
+    <li>Maintained complete accuracy with candidate personal credentials: Cynthia Alexander, Jain College (85%), Adarsh College (80%), Government School (90%), and active engineering projects.</li>
+    <li>Implemented industry-grade graphic standards by replacing emojis with crisp SVG vector icons and high-resolution photography.</li>
+    <li>Successfully integrated Git version control, GitHub remote repository synchronization, and automated continuous deployment on the Vercel Edge Network.</li>
+  </ol>
+
+  <h2 class="section-heading">6.2 Future Enhancements</h2>
+  <ul>
+    <li><strong>Dark/Light Theme Toggle:</strong> Implementing CSS custom property switching using local storage persistence.</li>
+    <li><strong>Dynamic Blog / Publications Engine:</strong> Integrating a headless content management system (CMS) or Markdown parser for technical article publication.</li>
+    <li><strong>Serverless Contact Form API:</strong> Connecting the contact form to a serverless backend function (e.g., SendGrid / Resend API) for automated email forwarding.</li>
+  </ul>
+
+  <h2 class="section-heading">6.3 Academic References &amp; Repository Links</h2>
+  <ul>
+    <li><strong>Production Website:</strong> <a href="https://assignment-1-topaz-alpha.vercel.app">https://assignment-1-topaz-alpha.vercel.app</a></li>
+    <li><strong>GitHub Repository:</strong> <a href="https://github.com/cynthiaalexandergeorge-create/assignment-1">https://github.com/cynthiaalexandergeorge-create/assignment-1</a></li>
+    <li><strong>MDN Web Docs:</strong> HTML5 Semantic Elements, CSS Grid, and Flexbox Specifications.</li>
+    <li><strong>W3C Recommendations:</strong> Scalable Vector Graphics (SVG) 2.0 Standards.</li>
+    <li><strong>Vercel Documentation:</strong> Continuous Deployment and Static Site Hosting Guidelines.</li>
+  </ul>
+
+  <!-- Signature Section -->
+  <div style="margin-top: 50px; padding-top: 20px; border-top: 1px dashed #334155; display: flex; justify-content: space-between; align-items: flex-end;">
+    <div>
+      <p style="margin: 0; font-size: 10pt; color: #475569;">Submitted by:</p>
+      <p style="margin: 4px 0 0 0; font-size: 13pt; font-weight: bold; color: #0f172a;">Cynthia Alexander</p>
+      <p style="margin: 0; font-size: 9.5pt; color: #475569;">B.E. Software Engineering, Jain College, Hubli</p>
+    </div>
+    <div style="text-align: right;">
+      <p style="margin: 0; font-size: 10pt; color: #475569;">Faculty Guide Approval:</p>
+      <p style="margin: 35px 0 0 0; font-size: 10pt; font-weight: bold;">Signature &amp; Seal</p>
+    </div>
+  </div>
+
+</body>
+</html>
