@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 650" width="100%" height="100%">
+  <defs>
+    <linearGradient id="aboutGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8fafc" />
+      <stop offset="100%" stop-color="#e2e8f0" />
+    </linearGradient>
+    <linearGradient id="charcoalGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#334155" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+  </defs>
+
+  <rect width="500" height="650" rx="20" fill="url(#aboutGrad)" />
+
+  <!-- Elegant artistic silhouette matching image 2 reference -->
+  <g opacity="0.92">
+    <!-- Body / Shoulders -->
+    <path d="M110 650 C120 540 180 500 240 480 C270 470 310 490 350 530 C370 560 380 610 390 650 Z" fill="url(#charcoalGrad)"/>
+    
+    <!-- Robe / Fabric folds -->
+    <path d="M180 520 C220 560 250 610 260 650" stroke="#475569" stroke-width="3" fill="none"/>
+    <path d="M300 500 C320 540 330 600 340 650" stroke="#475569" stroke-width="3" fill="none"/>
+
+    <!-- Head / Profile -->
+    <path d="M220 220 C210 160 260 140 290 150 C330 160 350 200 340 270 C330 340 280 390 230 400 C210 405 180 430 170 480 C180 440 220 420 250 420 C290 420 350 370 360 280 C370 190 340 130 280 120 C220 110 170 150 170 230 C170 300 210 350 220 380 Z" fill="url(#charcoalGrad)"/>
+    
+    <!-- Head wrap / artistic styling -->
+    <path d="M190 200 C170 230 160 290 190 360 C210 400 230 450 220 510 C210 460 190 410 170 370 C150 310 150 240 180 180 C200 140 240 120 290 130 C340 140 370 190 370 260 C370 330 330 400 290 450 C260 480 230 500 210 520 C240 480 280 450 310 400 C350 340 350 270 350 220 C340 170 310 140 270 140 C230 140 200 170 190 200 Z" fill="#64748b" opacity="0.6"/>
+  </g>
+</svg>

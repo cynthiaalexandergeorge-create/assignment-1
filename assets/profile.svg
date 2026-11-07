@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fdf2f4" />
+      <stop offset="100%" stop-color="#f3f4f6" />
+    </linearGradient>
+    <linearGradient id="hairGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4a2e18" />
+      <stop offset="100%" stop-color="#2c1810" />
+    </linearGradient>
+    <linearGradient id="skinGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fcd5b8" />
+      <stop offset="100%" stop-color="#f5be98" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- Background Circle / Card Backdrop -->
+  <circle cx="250" cy="250" r="230" fill="url(#bgGrad)" />
+  
+  <g filter="url(#shadow)">
+    <!-- Back Hair -->
+    <path d="M150 200 C130 320 150 420 170 480 L330 480 C350 420 370 320 350 200 C340 100 160 100 150 200 Z" fill="url(#hairGrad)"/>
+    
+    <!-- Torso / Striped Shirt (Matching Image 1 reference) -->
+    <path d="M160 480 C160 380 200 360 250 360 C300 360 340 380 340 480 Z" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+    <!-- Stripes -->
+    <path d="M172 400 Q250 420 328 400" stroke="#1f2937" stroke-width="6" fill="none"/>
+    <path d="M165 425 Q250 445 335 425" stroke="#1f2937" stroke-width="6" fill="none"/>
+    <path d="M162 450 Q250 470 338 450" stroke="#1f2937" stroke-width="6" fill="none"/>
+    <path d="M160 475 Q250 495 340 475" stroke="#1f2937" stroke-width="6" fill="none"/>
+
+    <!-- Neck -->
+    <path d="M225 320 L225 370 Q250 385 275 370 L275 320 Z" fill="url(#skinGrad)"/>
+
+    <!-- Head & Face -->
+    <ellipse cx="250" cy="240" rx="72" ry="90" fill="url(#skinGrad)"/>
+
+    <!-- Front Hair Style -->
+    <path d="M178 220 C180 140 230 130 250 130 C270 130 320 140 322 220 C322 240 315 280 320 360 C310 320 300 240 300 210 C275 230 225 230 200 210 C200 240 190 320 180 360 C185 280 178 240 178 220 Z" fill="url(#hairGrad)"/>
+
+    <!-- Eyebrows -->
+    <path d="M205 208 Q225 200 235 208" stroke="#38210f" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+    <path d="M265 208 Q275 200 295 208" stroke="#38210f" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+
+    <!-- Eyes -->
+    <ellipse cx="220" cy="225" rx="7" ry="5.5" fill="#2c1810"/>
+    <circle cx="222" cy="223" r="2" fill="#ffffff"/>
+    <ellipse cx="280" cy="225" rx="7" ry="5.5" fill="#2c1810"/>
+    <circle cx="282" cy="223" r="2" fill="#ffffff"/>
+
+    <!-- Glasses (Matching Image 1 reference) -->
+    <rect x="198" y="212" width="44" height="32" rx="14" fill="none" stroke="#6b7280" stroke-width="3.5"/>
+    <rect x="258" y="212" width="44" height="32" rx="14" fill="none" stroke="#6b7280" stroke-width="3.5"/>
+    <path d="M242 225 L258 225" stroke="#6b7280" stroke-width="3.5" stroke-linecap="round"/>
+    <path d="M198 225 L182 220" stroke="#6b7280" stroke-width="3" stroke-linecap="round"/>
+    <path d="M302 225 L318 220" stroke="#6b7280" stroke-width="3" stroke-linecap="round"/>
+
+    <!-- Nose -->
+    <path d="M250 232 L246 252 Q250 256 254 252" stroke="#e09d75" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+
+    <!-- Friendly Smile -->
+    <path d="M232 272 Q250 294 268 272" stroke="#be185d" stroke-width="3.5" stroke-linecap="round" fill="#ffffff"/>
+
+    <!-- Cheeks (Blush) -->
+    <ellipse cx="205" cy="255" rx="10" ry="6" fill="#f43f5e" opacity="0.25"/>
+    <ellipse cx="295" cy="255" rx="10" ry="6" fill="#f43f5e" opacity="0.25"/>
+  </g>
+</svg>

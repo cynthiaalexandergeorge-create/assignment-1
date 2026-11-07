@@ -3,109 +3,133 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Resume</title>
+    <title>My Resume | Cynthia Alexander</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<header>
-    <h1>My Resume</h1>
-</header>
+    <!-- ================= Modern Navbar ================= -->
+    <header class="site-header">
+        <div class="nav-container">
+            <a href="index.html" class="brand-logo">
+                <span class="brand-icon">C</span>
+                <span>Cynthia</span>
+            </a>
 
-<nav>
-    <a href="index.html">Home</a>
-    <a href="resume.html" class="active">Resume</a>
-    <a href="biodata.html">Bio-data</a>
-</nav>
+            <button class="mobile-toggle" onclick="toggleMenu()" aria-label="Toggle navigation">☰</button>
 
-<div class="container">
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="resume.html" class="active">Resume</a></li>
+                <li><a href="biodata.html">Bio-data</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
 
-    <h2>Personal Information</h2>
+            <div class="nav-actions">
+                <a href="contact.html" class="btn-contact-nav">Contact Me</a>
+            </div>
+        </div>
+    </header>
 
-    <p><b>Name:</b> Cynthia Alexander</p>
-    <p><b>Email:</b> cyntalex@gmail.com</p>
-    <p><b>Phone:</b> 8972639101</p>
-    <p><b>Address:</b> Hubli, Karnataka</p>
+    <!-- ================= Resume Main Content ================= -->
+    <main class="page-container">
+        <div class="page-header-card">
+            <h1>Curriculum Vitae</h1>
+            <p>Comprehensive academic qualifications, technical proficiencies, and projects</p>
+        </div>
 
-    <h2>Career Objective</h2>
+        <div class="content-card">
+            <!-- Personal Information -->
+            <h2 class="card-section-title">Personal Information</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin-bottom: 24px;">
+                <p><strong>Name:</strong> Cynthia Alexander</p>
+                <p><strong>Email:</strong> <a href="mailto:cyntalex@gmail.com" style="color: var(--primary); text-decoration: none;">cyntalex@gmail.com</a></p>
+                <p><strong>Phone:</strong> +91 8972639101</p>
+                <p><strong>Address:</strong> Hubli, Karnataka</p>
+            </div>
 
-    <p>
-        To obtain a challenging position where I can use my technical
-        knowledge and skills to contribute to the growth of the organization
-        and develop my professional career.
-    </p>
+            <!-- Career Objective -->
+            <h2 class="card-section-title">Career Objective</h2>
+            <p style="color: #374151; font-size: 15px; line-height: 1.7; margin-bottom: 24px;">
+                To obtain a challenging position where I can use my technical knowledge and skills to contribute to the growth of the organization and develop my professional career.
+            </p>
 
-    <h2>Educational Qualification</h2>
+            <!-- Educational Qualification -->
+            <h2 class="card-section-title">Educational Qualification</h2>
+            <table class="modern-table">
+                <thead>
+                    <tr>
+                        <th>Qualification</th>
+                        <th>Institution</th>
+                        <th>Year</th>
+                        <th>Percentage</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>B.E.</strong></td>
+                        <td>Jain College</td>
+                        <td>2026</td>
+                        <td><span style="font-weight: 700; color: #047857;">85%</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>PUC</strong></td>
+                        <td>Adarsh College</td>
+                        <td>2022</td>
+                        <td><span style="font-weight: 700; color: #047857;">80%</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>SSLC</strong></td>
+                        <td>Government School</td>
+                        <td>2020</td>
+                        <td><span style="font-weight: 700; color: #047857;">90%</span></td>
+                    </tr>
+                </tbody>
+            </table>
 
-    <table>
-        <tr>
-            <th>Qualification</th>
-            <th>Institution</th>
-            <th>Year</th>
-            <th>Percentage</th>
-        </tr>
+            <!-- Technical Skills -->
+            <h2 class="card-section-title">Technical Skills</h2>
+            <div class="skill-tags">
+                <span class="skill-tag">C Programming</span>
+                <span class="skill-tag">HTML & CSS</span>
+                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">Database Management</span>
+                <span class="skill-tag">AI & Federated Learning</span>
+            </div>
 
-        <tr>
-            <td>B.E.</td>
-            <td>Jain College</td>
-            <td>2026</td>
-            <td>85%</td>
-        </tr>
+            <!-- Projects -->
+            <h2 class="card-section-title">Projects</h2>
+            <ul class="modern-list">
+                <li><strong>Student Management System:</strong> Comprehensive portal to manage student records, grades, and academic tracking.</li>
+                <li><strong>Food Waste Management System:</strong> Platform connecting excess food sources with community shelters to minimize waste.</li>
+                <li><strong>AI in Federated Learning:</strong> Decentralized machine learning framework prioritizing data privacy while training predictive models.</li>
+            </ul>
 
-        <tr>
-            <td>PUC</td>
-            <td>Adarsh College</td>
-            <td>2022</td>
-            <td>80%</td>
-        </tr>
+            <!-- Achievements -->
+            <h2 class="card-section-title">Achievements</h2>
+            <ul class="modern-list">
+                <li>Participated in State-level Technical Quiz Competition</li>
+                <li>Successfully completed Advanced Web Development Workshop</li>
+                <li>Active participant in College Coding Contests</li>
+            </ul>
 
-        <tr>
-            <td>SSLC</td>
-            <td>Government School</td>
-            <td>2020</td>
-            <td>90%</td>
-        </tr>
-    </table>
+            <!-- Hobbies -->
+            <h2 class="card-section-title">Hobbies</h2>
+            <div class="skill-tags">
+                <span class="skill-tag">📖 Reading</span>
+                <span class="skill-tag">🎵 Music</span>
+            </div>
+        </div>
+    </main>
 
-    <h2>Technical Skills</h2>
+    <!-- ================= Footer ================= -->
+    <footer class="site-footer">
+        <p>&copy; 2026 Cynthia Alexander. All rights reserved.</p>
+        <p>Hubli, Karnataka • cyntalex@gmail.com</p>
+    </footer>
 
-    <ul>
-        <li>C Programming</li>
-        <li>HTML and CSS</li>
-        <li>JavaScript</li>
-        <li>Python</li>
-        <li>Database Management</li>
-    </ul>
-
-    <h2>Projects</h2>
-
-    <ul>
-        <li>Student Management System</li>
-        <li>Food Waste Management System</li>
-        <li>AI in Federated Learning</li>
-    </ul>
-
-    <h2>Achievements</h2>
-
-    <ul>
-        <li>Participated in Technical Quiz</li>
-        <li>Completed Web Development Workshop</li>
-        <li>Participated in Coding Competition</li>
-    </ul>
-
-    <h2>Hobbies</h2>
-
-    <ul>
-        <li>Reading</li>
-        <li>Music</li>
-    </ul>
-
-</div>
-
-<footer>
-    <p>&copy; 2026 Cynthia Alexander</p>
-</footer>
-
+    <script src="script.js"></script>
 </body>
 </html>

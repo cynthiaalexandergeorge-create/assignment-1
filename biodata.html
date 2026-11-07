@@ -1,100 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Bio-data</title>
+    <title>My Bio-data | Cynthia Alexander</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<header>
-    <h1>My Bio-data</h1>
-</header>
+    <!-- ================= Modern Navbar ================= -->
+    <header class="site-header">
+        <div class="nav-container">
+            <a href="index.html" class="brand-logo">
+                <span class="brand-icon">C</span>
+                <span>Cynthia</span>
+            </a>
 
-<nav>
-    <a href="index.html">Home</a>
-    <a href="resume.html">Resume</a>
-    <a href="biodata.html" class="active">Bio-data</a>
-</nav>
+            <button class="mobile-toggle" onclick="toggleMenu()" aria-label="Toggle navigation">☰</button>
 
-<div class="container">
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="biodata.html" class="active">Bio-data</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
 
-    <h2>Personal Details</h2>
+            <div class="nav-actions">
+                <a href="contact.html" class="btn-contact-nav">Contact Me</a>
+            </div>
+        </div>
+    </header>
 
-    <table class="biodata">
+    <!-- ================= Bio-data Main Content ================= -->
+    <main class="page-container">
+        <div class="page-header-card">
+            <h1>Bio-Data</h1>
+            <p>Official Personal Profile & Verification Record</p>
+        </div>
 
-        <tr>
-            <th>Name</th>
-            <td>Cynthia Alexander</td>
-        </tr>
+        <div class="content-card">
+            <h2 class="card-section-title">Personal Details</h2>
 
-        <tr>
-            <th>Date of Birth</th>
-            <td>01 January 2006</td>
-        </tr>
+            <table class="modern-table biodata-table">
+                <tbody>
+                    <tr>
+                        <th>Full Name</th>
+                        <td>Cynthia Alexander</td>
+                    </tr>
+                    <tr>
+                        <th>Date of Birth</th>
+                        <td>01 January 2006</td>
+                    </tr>
+                    <tr>
+                        <th>Gender</th>
+                        <td>Female</td>
+                    </tr>
+                    <tr>
+                        <th>Nationality</th>
+                        <td>Indian</td>
+                    </tr>
+                    <tr>
+                        <th>Languages Known</th>
+                        <td>English, Kannada, Tamil, Hindi</td>
+                    </tr>
+                    <tr>
+                        <th>Hobbies</th>
+                        <td>Reading, Music</td>
+                    </tr>
+                    <tr>
+                        <th>Residential Address</th>
+                        <td>Hubli, Karnataka, India</td>
+                    </tr>
+                    <tr>
+                        <th>Email Address</th>
+                        <td><a href="mailto:cyntalex@gmail.com" style="color: var(--primary); text-decoration: none;">cyntalex@gmail.com</a></td>
+                    </tr>
+                    <tr>
+                        <th>Contact Phone</th>
+                        <td>+91 8972639101</td>
+                    </tr>
+                </tbody>
+            </table>
 
-        <tr>
-            <th>Gender</th>
-            <td>Female</td>
-        </tr>
+            <h2 class="card-section-title">Declaration</h2>
+            <p style="color: #4b5563; font-size: 15px; line-height: 1.8; margin-bottom: 24px;">
+                I hereby declare that the information provided above is true and correct to the best of my knowledge and belief.
+            </p>
 
-        <tr>
-            <th>Nationality</th>
-            <td>Indian</td>
-        </tr>
+            <div style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: gap: 20px; margin-top: 36px; padding-top: 20px; border-top: 1px dashed var(--border-light);">
+                <div>
+                    <p style="font-size: 14.5px; margin-bottom: 6px;"><strong>Place:</strong> Hubli</p>
+                    <p style="font-size: 14.5px;"><strong>Date:</strong> 25/09/2026</p>
+                </div>
+                <div style="text-align: right;">
+                    <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 4px;">Signature</p>
+                    <p style="font-size: 20px; font-weight: 800; color: var(--text-main); font-family: 'Segoe UI', cursive, sans-serif;">Cynthia Alexander</p>
+                </div>
+            </div>
+        </div>
+    </main>
 
-        <tr>
-            <th>Languages Known</th>
-            <td>English, Kannada, Tamil, Hindi</td>
-        </tr>
+    <!-- ================= Footer ================= -->
+    <footer class="site-footer">
+        <p>&copy; 2026 Cynthia Alexander. All rights reserved.</p>
+        <p>Hubli, Karnataka • cyntalex@gmail.com</p>
+    </footer>
 
-        <tr>
-            <th>Hobbies</th>
-            <td>Reading, Music</td>
-        </tr>
-
-        <tr>
-            <th>Address</th>
-            <td>Hubli, Karnataka</td>
-        </tr>
-
-        <tr>
-            <th>Email</th>
-            <td>cyntalex@gmail.com</td>
-        </tr>
-
-        <tr>
-            <th>Phone</th>
-            <td>8972639101</td>
-        </tr>
-
-    </table>
-
-    <h2>Declaration</h2>
-
-    <p>
-        I hereby declare that the information provided above is true
-        and correct to the best of my knowledge and belief.
-    </p>
-
-    <br>
-
-    <p><b>Place:</b> Hubli</p>
-    <p><b>Date:</b> 25/09/2026</p>
-
-    <br>
-
-    <p><b>Signature:</b></p>
-    <p>Cynthia Alexander</p>
-
-</div>
-
-<footer>
-    <p>&copy; 2026 Cynthia Alexander</p>
-</footer>
-
+    <script src="script.js"></script>
 </body>
 </html>
