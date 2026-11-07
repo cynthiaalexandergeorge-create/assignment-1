@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Project Report - Cynthia Alexander</title>
+  <style>
+    @page {
+      size: A4;
+      margin: 20mm 18mm 20mm 18mm;
+    }
+    
+    body {
+      font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
+      color: #1e293b;
+      line-height: 1.6;
+      font-size: 11pt;
+      margin: 0;
+      padding: 0;
+      background: #ffffff;
+    }
+
+    /* Cover / Header Section */
+    .report-header {
+      border-bottom: 2.5px solid #0f172a;
+      padding-bottom: 16px;
+      margin-bottom: 24px;
+    }
+
+    .report-badge {
+      display: inline-block;
+      background: #0f172a;
+      color: #ffffff;
+      font-size: 8.5pt;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 4px;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      font-size: 20pt;
+      font-weight: 800;
+      color: #0f172a;
+      margin: 0 0 8px 0;
+      line-height: 1.25;
+    }
+
+    .subtitle {
+      font-size: 11pt;
+      color: #475569;
+      margin: 0;
+      font-weight: 500;
+    }
+
+    /* Metadata Grid */
+    .meta-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0 24px 0;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 6px;
+      overflow: hidden;
+    }
+
+    .meta-table td {
+      padding: 8px 14px;
+      font-size: 9.5pt;
+      border-bottom: 1px solid #edf2f7;
+    }
+
+    .meta-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .meta-label {
+      width: 25%;
+      font-weight: 700;
+      color: #64748b;
+      text-transform: uppercase;
+      font-size: 8pt;
+      letter-spacing: 0.5px;
+    }
+
+    .meta-val {
+      color: #0f172a;
+      font-weight: 600;
+    }
+
+    .meta-val a {
+      color: #2563eb;
+      text-decoration: none;
+    }
+
+    /* Headings */
+    h2 {
+      font-size: 13pt;
+      font-weight: 800;
+      color: #0f172a;
+      margin-top: 24px;
+      margin-bottom: 10px;
+      padding-bottom: 4px;
+      border-bottom: 1.5px solid #e2e8f0;
+      page-break-after: avoid;
+    }
+
+    h3 {
+      font-size: 11pt;
+      font-weight: 700;
+      color: #1e293b;
+      margin-top: 14px;
+      margin-bottom: 6px;
+      page-break-after: avoid;
+    }
+
+    p {
+      margin: 0 0 10px 0;
+      color: #334155;
+      text-align: justify;
+    }
+
+    /* Tables */
+    table.data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 12px 0 18px 0;
+      font-size: 9.5pt;
+      page-break-inside: avoid;
+    }
+
+    table.data-table th {
+      background-color: #0f172a;
+      color: #ffffff;
+      font-weight: 700;
+      text-align: left;
+      padding: 8px 12px;
+      font-size: 8.5pt;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    table.data-table td {
+      padding: 8px 12px;
+      border: 1px solid #e2e8f0;
+      color: #334155;
+    }
+
+    table.data-table tr:nth-child(even) td {
+      background-color: #f8fafc;
+    }
+
+    /* Lists */
+    ul {
+      margin: 6px 0 14px 20px;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 4px;
+      color: #334155;
+      font-size: 10pt;
+    }
+
+    li strong {
+      color: #0f172a;
+    }
+
+    /* Box callouts */
+    .callout {
+      background: #f1f5f9;
+      border-left: 4px solid #0f172a;
+      padding: 10px 14px;
+      margin: 14px 0;
+      border-radius: 0 6px 6px 0;
+      font-size: 9.5pt;
+      color: #334155;
+      page-break-inside: avoid;
+    }
+
+    /* Architecture Diagram Box */
+    .arch-box {
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      padding: 14px;
+      margin: 14px 0;
+      background: #fafafa;
+      page-break-inside: avoid;
+    }
+
+    .arch-flow {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-align: center;
+      gap: 8px;
+    }
+
+    .arch-step {
+      flex: 1;
+      background: #ffffff;
+      border: 1.5px solid #0f172a;
+      border-radius: 6px;
+      padding: 8px 4px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+    }
+
+    .arch-step-title {
+      font-size: 8.5pt;
+      font-weight: 800;
+      color: #0f172a;
+      text-transform: uppercase;
+    }
+
+    .arch-step-sub {
+      font-size: 7.5pt;
+      color: #64748b;
+      margin-top: 2px;
+    }
+
+    .arch-arrow {
+      color: #ff5e62;
+      font-size: 12pt;
+      font-weight: 900;
+    }
+
+    /* Badges */
+    .badge {
+      display: inline-block;
+      font-size: 8pt;
+      font-weight: 700;
+      padding: 2px 6px;
+      border-radius: 3px;
+    }
+    .badge-success { background: #dcfce7; color: #166534; }
+
+    /* Footer / Sign-off */
+    .sign-section {
+      margin-top: 32px;
+      padding-top: 16px;
+      border-top: 1px dashed #cbd5e1;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      page-break-inside: avoid;
+    }
+
+    .sign-block {
+      text-align: right;
+    }
+
+    .signature-name {
+      font-size: 14pt;
+      font-weight: 800;
+      color: #0f172a;
+      margin-top: 4px;
+    }
+
+    .page-break {
+      page-break-before: always;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Cover / Header -->
+  <div class="report-header">
+    <div class="report-badge">Laboratory Project Report</div>
+    <h1>Personal Portfolio, Resume & Bio-Data Web Application</h1>
+    <p class="subtitle">Academic Implementation, Architecture Design & Cloud Deployment Documentation</p>
+  </div>
+
+  <!-- Metadata Table -->
+  <table class="meta-table">
+    <tr>
+      <td class="meta-label">Course / Lab</td>
+      <td class="meta-val">Web Technology / Internet Technology Laboratory (Assignment 1)</td>
+      <td class="meta-label">Candidate Name</td>
+      <td class="meta-val">Cynthia Alexander</td>
+    </tr>
+    <tr>
+      <td class="meta-label">Degree & College</td>
+      <td class="meta-val">B.E. (Software Engineering), Jain College, Hubli, Karnataka</td>
+      <td class="meta-label">Live Deployment</td>
+      <td class="meta-val"><a href="https://assignment-1-topaz-alpha.vercel.app">assignment-1-topaz-alpha.vercel.app</a></td>
+    </tr>
+    <tr>
+      <td class="meta-label">Version Control</td>
+      <td class="meta-val"><a href="https://github.com/cynthiaalexandergeorge-create/assignment-1">github.com/cynthiaalexandergeorge-create/assignment-1</a></td>
+      <td class="meta-label">Submission Date</td>
+      <td class="meta-val">November 2026</td>
+    </tr>
+  </table>
+
+  <!-- 1. Executive Summary -->
+  <h2>1. Executive Summary</h2>
+  <p>
+    This project delivers a multi-page personal portfolio, curriculum vitae, and bio-data web platform designed to satisfy academic web development laboratory specifications. The web platform establishes a professional online digital identity for <strong>Cynthia Alexander</strong>, an engineering student at Jain College, Hubli.
+  </p>
+  <p>
+    Starting from foundational laboratory reference specifications, the system was re-architected following contemporary UI/UX design standards, semantic HTML5 structure, modern CSS3 layout systems (CSS Grid and Flexbox), vanilla JavaScript for DOM manipulation, and pure SVG vector graphics. The completed codebase is version-controlled with Git, maintained on GitHub, and hosted on the Vercel Edge Network.
+  </p>
+
+  <!-- 2. Technology Stack -->
+  <h2>2. Technology Stack & Deployment Architecture</h2>
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>Layer / Component</th>
+        <th>Technology</th>
+        <th>Functional Role</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Document Structure</strong></td>
+        <td>HTML5 (Semantic)</td>
+        <td>Provides structural semantic markup, accessibility (A11y), and form controls.</td>
+      </tr>
+      <tr>
+        <td><strong>Presentation Layer</strong></td>
+        <td>CSS3 (Vanilla)</td>
+        <td>Custom CSS design tokens, CSS Grid, Flexbox, keyframe animations, and media queries.</td>
+      </tr>
+      <tr>
+        <td><strong>Behavioral Logic</strong></td>
+        <td>JavaScript (ES6+)</td>
+        <td>Mobile navigation toggle, interactive form validation, and event handling.</td>
+      </tr>
+      <tr>
+        <td><strong>Vector Iconography</strong></td>
+        <td>Inline SVG (Scalable Vector Graphics)</td>
+        <td>Resolution-independent icons and animated rotating vector badge.</td>
+      </tr>
+      <tr>
+        <td><strong>Photography Assets</strong></td>
+        <td>Web-Optimized JPEG</td>
+        <td>High-resolution studio portfolio and portrait photography.</td>
+      </tr>
+      <tr>
+        <td><strong>Version Control</strong></td>
+        <td>Git & GitHub</td>
+        <td>Branch management (<code>main</code>), distributed versioning, and remote sync.</td>
+      </tr>
+      <tr>
+        <td><strong>Hosting & CI/CD</strong></td>
+        <td>Vercel Edge Network</td>
+        <td>Automated webhook continuous deployment, global CDN, and automated SSL.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="arch-box">
+    <div style="font-size: 8.5pt; font-weight: 800; color: #64748b; text-transform: uppercase; margin-bottom: 8px; text-align: center;">Continuous Deployment Pipeline Architecture</div>
+    <div class="arch-flow">
+      <div class="arch-step">
+        <div class="arch-step-title">Source Code</div>
+        <div class="arch-step-sub">HTML5 / CSS3 / JS</div>
+      </div>
+      <div class="arch-arrow">➔</div>
+      <div class="arch-step">
+        <div class="arch-step-title">Local Git</div>
+        <div class="arch-step-sub">Commit &amp; Tag</div>
+      </div>
+      <div class="arch-arrow">➔</div>
+      <div class="arch-step">
+        <div class="arch-step-title">GitHub Repo</div>
+        <div class="arch-step-sub">Branch: main</div>
+      </div>
+      <div class="arch-arrow">➔</div>
+      <div class="arch-step">
+        <div class="arch-step-title">Vercel Cloud</div>
+        <div class="arch-step-sub">Automated CI/CD</div>
+      </div>
+      <div class="arch-arrow">➔</div>
+      <div class="arch-step" style="border-color: #10b981; background: #ecfdf5;">
+        <div class="arch-step-title" style="color: #065f46;">Live Production</div>
+        <div class="arch-step-sub">Global Edge CDN</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-break"></div>
+
+  <!-- 3. Web Platform Modules -->
+  <h2>3. Web Platform Modules & Specifications</h2>
+
+  <h3>3.1 Home Page (index.html)</h3>
+  <ul>
+    <li><strong>Header &amp; Navigation:</strong> Sticky desktop and mobile responsive navigation bar with brand monogram badge (<code>C</code>), page routing links, and high-contrast call-to-action button.</li>
+    <li><strong>Hero Showcase:</strong> Prominent presentation featuring an electric-lime tag (<code>Hello I Am</code>), bold headline (<code>I'm Cynthia</code>), professional summary, and call-to-action routing.</li>
+    <li><strong>Circular Vector Rotating Badge:</strong> Pure SVG <code>&lt;textPath&gt;</code> curving smoothly along a circular radius (<code>SOFTWARE ENGINEERING • CYNTHIA •</code>) executing continuous 360° keyframe animation around studio portrait photography.</li>
+    <li><strong>Dark Feature Ticker:</strong> Obsidian-black banner with electric-lime sparkle vectors highlighting competencies in Software Engineering, AI &amp; Federated Learning, Web Architecture, and Problem Solving.</li>
+    <li><strong>Embedded About Preview:</strong> Introductory biography preview guiding visitors to the complete profile.</li>
+  </ul>
+
+  <h3>3.2 About Me (about.html)</h3>
+  <ul>
+    <li><strong>Narrative Statement:</strong> In-depth academic narrative highlighting software engineering coursework at Jain College, focus on clean architecture, and passion for distributed artificial intelligence systems.</li>
+    <li><strong>Visual Anchor:</strong> Clean monochrome portrait photography.</li>
+    <li><strong>Core Identity Badges:</strong> Structured capsule tags denoting candidate attributes: <code>[Software Engineering Student]</code>, <code>[Tech Enthusiast]</code>, <code>[Problem Solver]</code>, <code>[Quick Learner]</code>, and <code>[Hubli, Karnataka]</code>.</li>
+  </ul>
+
+  <h3>3.3 Curriculum Vitae / Resume (resume.html)</h3>
+  <ul>
+    <li><strong>Personal Information:</strong> Direct communication points (Email: <code>cyntalex@gmail.com</code>, Phone: <code>+91 8972639101</code>, Location: <code>Hubli, Karnataka</code>).</li>
+    <li><strong>Career Objective:</strong> Professional aspiration statement in enterprise software engineering.</li>
+    <li><strong>Educational Qualifications:</strong>
+      <table class="data-table" style="margin-top: 6px;">
+        <thead>
+          <tr>
+            <th>Level</th>
+            <th>Institution</th>
+            <th>Completion Year</th>
+            <th>Percentage</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>B.E. (Software Engineering)</strong></td><td>Jain College</td><td>2026</td><td><strong>85%</strong></td></tr>
+          <tr><td><strong>PUC (Pre-University)</strong></td><td>Adarsh College</td><td>2022</td><td><strong>80%</strong></td></tr>
+          <tr><td><strong>SSLC (10th Standard)</strong></td><td>Government School</td><td>2020</td><td><strong>90%</strong></td></tr>
+        </tbody>
+      </table>
+    </li>
+    <li><strong>Technical Competencies:</strong> C Programming, HTML &amp; CSS, JavaScript, Python, Database Management, and AI &amp; Federated Learning.</li>
+    <li><strong>Project Portfolio:</strong>
+      <ul>
+        <li><em>Student Management System:</em> Comprehensive academic record and grading platform.</li>
+        <li><em>Food Waste Management System:</em> Platform connecting surplus food supply with community networks to minimize waste.</li>
+        <li><em>AI in Federated Learning:</em> Decentralized privacy-preserving machine learning framework.</li>
+      </ul>
+    </li>
+    <li><strong>Achievements &amp; Hobbies:</strong> Technical quiz competitions, web development workshops, coding competitions, literature reading, and music.</li>
+  </ul>
+
+  <h3>3.4 Official Bio-Data (biodata.html)</h3>
+  <ul>
+    <li><strong>Institutional Record Format:</strong> Detailed key-value table recording Full Name, Date of Birth (<code>01 January 2006</code>), Gender (<code>Female</code>), Nationality (<code>Indian</code>), Languages (<code>English, Kannada, Tamil, Hindi</code>), Residential Address, and Contact numbers.</li>
+    <li><strong>Legal Declaration:</strong> Formal statement certifying truthfulness and factual accuracy.</li>
+    <li><strong>Authentication Block:</strong> Place (<em>Hubli</em>), Date (<em>25/09/2026</em>), and formal signature block.</li>
+  </ul>
+
+  <h3>3.5 Contact Module (contact.html)</h3>
+  <ul>
+    <li><strong>Direct Channel Cards:</strong> Contact channels for Email, Telephone, Geographic Address, and Internship Availability Status.</li>
+    <li><strong>Interactive Message Form:</strong> Client-side validated form fields (Name, Email, Subject, Message) coupled with instant feedback confirmation banner on submission.</li>
+  </ul>
+
+  <!-- 4. Key Design & Engineering Techniques -->
+  <h2>4. Key Design &amp; Engineering Techniques</h2>
+  <div class="callout">
+    <strong>Pure SVG Vector Engineering:</strong> Casual emoji characters were systematically eliminated in favor of clean, resolution-independent SVG vector iconography. Stroke-based geometry (<code>viewBox="0 0 24 24"</code>, <code>stroke-width="2"</code>) ensures sharp rendering across high-DPI retina displays and seamless theme color inheritance via <code>currentColor</code>.
+  </div>
+  <ul>
+    <li><strong>CSS Design Tokens:</strong> Unified stylesheet utilizing variables for brand colors (<code>--primary: #ff5e62</code>, <code>--accent-lime: #ccff00</code>, <code>--dark-bg: #090a0f</code>) and typography scales.</li>
+    <li><strong>Responsive Viewport Breakpoints:</strong> Dynamic media queries at <code>900px</code> and <code>650px</code> ensuring accessibility across smartphones, tablets, and desktop workstations.</li>
+    <li><strong>Semantic Markup:</strong> Proper use of <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;section&gt;</code>, and <code>&lt;footer&gt;</code> for optimal screen reader accessibility and SEO.</li>
+  </ul>
+
+  <!-- 5. Verification Table -->
+  <h2>5. Live Verification &amp; Endpoint Test Results</h2>
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>Page Route</th>
+        <th>Production Endpoint</th>
+        <th>HTTP Status</th>
+        <th>Audit Result</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Home</strong></td>
+        <td><code>https://assignment-1-topaz-alpha.vercel.app/</code></td>
+        <td><span class="badge badge-success">200 OK</span></td>
+        <td>Rendered successfully with all styles and assets.</td>
+      </tr>
+      <tr>
+        <td><strong>About Me</strong></td>
+        <td><code>https://assignment-1-topaz-alpha.vercel.app/about.html</code></td>
+        <td><span class="badge badge-success">200 OK</span></td>
+        <td>Full profile narrative and portrait operational.</td>
+      </tr>
+      <tr>
+        <td><strong>Resume / CV</strong></td>
+        <td><code>https://assignment-1-topaz-alpha.vercel.app/resume.html</code></td>
+        <td><span class="badge badge-success">200 OK</span></td>
+        <td>Complete education, skills, and projects verified.</td>
+      </tr>
+      <tr>
+        <td><strong>Bio-Data</strong></td>
+        <td><code>https://assignment-1-topaz-alpha.vercel.app/biodata.html</code></td>
+        <td><span class="badge badge-success">200 OK</span></td>
+        <td>Personal details table and declaration confirmed.</td>
+      </tr>
+      <tr>
+        <td><strong>Contact</strong></td>
+        <td><code>https://assignment-1-topaz-alpha.vercel.app/contact.html</code></td>
+        <td><span class="badge badge-success">200 OK</span></td>
+        <td>Contact channels and interactive form verified.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Sign-off Block -->
+  <div class="sign-section">
+    <div>
+      <p style="font-size: 9pt; color: #64748b; margin: 0;">Verified and submitted by:</p>
+      <div class="signature-name">Cynthia Alexander</div>
+      <p style="font-size: 8.5pt; color: #64748b; margin: 2px 0 0 0;">Department of Software Engineering, Jain College</p>
+    </div>
+    <div class="sign-block">
+      <p style="font-size: 9pt; color: #64748b; margin: 0;">Location: <strong>Hubli, Karnataka</strong></p>
+      <p style="font-size: 9pt; color: #64748b; margin: 2px 0 0 0;">Date: <strong>07 November 2026</strong></p>
+    </div>
+  </div>
+
+</body>
+</html>
