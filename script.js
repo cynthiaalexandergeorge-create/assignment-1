@@ -1,8 +1,3 @@
-// Welcome Message Alert
-function welcomeMessage() {
-    alert("Hello! Welcome to Cynthia Alexander's Portfolio & Resume Website.");
-}
-
 // Mobile Navigation Toggle
 function toggleMenu() {
     const navLinks = document.getElementById("navLinks");

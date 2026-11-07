@@ -12,11 +12,17 @@
     <header class="site-header">
         <div class="nav-container">
             <a href="index.html" class="brand-logo">
-                <span class="brand-icon">C</span>
+                <span class="brand-badge">C</span>
                 <span>Cynthia</span>
             </a>
 
-            <button class="mobile-toggle" onclick="toggleMenu()" aria-label="Toggle navigation">☰</button>
+            <button class="mobile-toggle" onclick="toggleMenu()" aria-label="Toggle navigation">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="4" x2="20" y1="6" y2="6"/>
+                    <line x1="4" x2="20" y1="12" y2="12"/>
+                    <line x1="4" x2="20" y1="18" y2="18"/>
+                </svg>
+            </button>
 
             <ul class="nav-links" id="navLinks">
                 <li><a href="index.html">Home</a></li>
@@ -27,7 +33,12 @@
             </ul>
 
             <div class="nav-actions">
-                <a href="contact.html" class="btn-contact-nav">Contact Me</a>
+                <a href="contact.html" class="btn-contact-nav">
+                    <span>Contact Me</span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
             </div>
         </div>
     </header>
@@ -41,22 +52,40 @@
 
         <div class="content-card">
             <!-- Personal Information -->
-            <h2 class="card-section-title">Personal Information</h2>
+            <h2 class="card-section-title">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/>
+                    <circle cx="12" cy="7" r="4"/>
+                </svg>
+                <span>Personal Information</span>
+            </h2>
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin-bottom: 24px;">
                 <p><strong>Name:</strong> Cynthia Alexander</p>
                 <p><strong>Email:</strong> <a href="mailto:cyntalex@gmail.com" style="color: var(--primary); text-decoration: none;">cyntalex@gmail.com</a></p>
                 <p><strong>Phone:</strong> +91 8972639101</p>
-                <p><strong>Address:</strong> Hubli, Karnataka</p>
+                <p><strong>Address:</strong> Hubli, Karnataka, India</p>
             </div>
 
             <!-- Career Objective -->
-            <h2 class="card-section-title">Career Objective</h2>
-            <p style="color: #374151; font-size: 15px; line-height: 1.7; margin-bottom: 24px;">
+            <h2 class="card-section-title">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"/>
+                    <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/>
+                </svg>
+                <span>Career Objective</span>
+            </h2>
+            <p style="color: #334155; font-size: 15px; line-height: 1.7; margin-bottom: 24px;">
                 To obtain a challenging position where I can use my technical knowledge and skills to contribute to the growth of the organization and develop my professional career.
             </p>
 
             <!-- Educational Qualification -->
-            <h2 class="card-section-title">Educational Qualification</h2>
+            <h2 class="card-section-title">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                    <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+                </svg>
+                <span>Educational Qualification</span>
+            </h2>
             <table class="modern-table">
                 <thead>
                     <tr>
@@ -89,7 +118,13 @@
             </table>
 
             <!-- Technical Skills -->
-            <h2 class="card-section-title">Technical Skills</h2>
+            <h2 class="card-section-title">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="16 18 22 12 16 6"/>
+                    <polyline points="8 6 2 12 8 18"/>
+                </svg>
+                <span>Technical Skills</span>
+            </h2>
             <div class="skill-tags">
                 <span class="skill-tag">C Programming</span>
                 <span class="skill-tag">HTML & CSS</span>
@@ -100,26 +135,88 @@
             </div>
 
             <!-- Projects -->
-            <h2 class="card-section-title">Projects</h2>
+            <h2 class="card-section-title">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect width="20" height="14" x="2" y="3" rx="2"/>
+                    <line x1="8" x2="16" y1="21" y2="21"/>
+                    <line x1="12" x2="12" y1="17" y2="21"/>
+                </svg>
+                <span>Projects</span>
+            </h2>
             <ul class="modern-list">
-                <li><strong>Student Management System:</strong> Comprehensive portal to manage student records, grades, and academic tracking.</li>
-                <li><strong>Food Waste Management System:</strong> Platform connecting excess food sources with community shelters to minimize waste.</li>
-                <li><strong>AI in Federated Learning:</strong> Decentralized machine learning framework prioritizing data privacy while training predictive models.</li>
+                <li>
+                    <svg class="list-bullet-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="9 18 15 12 9 6"/>
+                    </svg>
+                    <span><strong>Student Management System:</strong> Comprehensive portal to manage student records, grades, and academic tracking.</span>
+                </li>
+                <li>
+                    <svg class="list-bullet-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="9 18 15 12 9 6"/>
+                    </svg>
+                    <span><strong>Food Waste Management System:</strong> Community platform connecting surplus food supply with distribution networks to reduce food wastage.</span>
+                </li>
+                <li>
+                    <svg class="list-bullet-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="9 18 15 12 9 6"/>
+                    </svg>
+                    <span><strong>AI in Federated Learning:</strong> Decentralized machine learning framework prioritizing data privacy while training distributed predictive models.</span>
+                </li>
             </ul>
 
             <!-- Achievements -->
-            <h2 class="card-section-title">Achievements</h2>
+            <h2 class="card-section-title">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="8" r="7"/>
+                    <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/>
+                </svg>
+                <span>Achievements</span>
+            </h2>
             <ul class="modern-list">
-                <li>Participated in State-level Technical Quiz Competition</li>
-                <li>Successfully completed Advanced Web Development Workshop</li>
-                <li>Active participant in College Coding Contests</li>
+                <li>
+                    <svg class="list-bullet-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="9 18 15 12 9 6"/>
+                    </svg>
+                    <span>Participated in Technical Quiz Competition</span>
+                </li>
+                <li>
+                    <svg class="list-bullet-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="9 18 15 12 9 6"/>
+                    </svg>
+                    <span>Completed Web Development Workshop</span>
+                </li>
+                <li>
+                    <svg class="list-bullet-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="9 18 15 12 9 6"/>
+                    </svg>
+                    <span>Participated in Coding Competition</span>
+                </li>
             </ul>
 
             <!-- Hobbies -->
-            <h2 class="card-section-title">Hobbies</h2>
+            <h2 class="card-section-title">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                </svg>
+                <span>Hobbies</span>
+            </h2>
             <div class="skill-tags">
-                <span class="skill-tag">📖 Reading</span>
-                <span class="skill-tag">🎵 Music</span>
+                <span class="skill-tag">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/>
+                        <path d="M6 6h10"/>
+                        <path d="M6 10h10"/>
+                    </svg>
+                    <span>Reading</span>
+                </span>
+                <span class="skill-tag">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 18V5l12-2v13"/>
+                        <circle cx="6" cy="18" r="3"/>
+                        <circle cx="18" cy="16" r="3"/>
+                    </svg>
+                    <span>Music</span>
+                </span>
             </div>
         </div>
     </main>
@@ -127,7 +224,7 @@
     <!-- ================= Footer ================= -->
     <footer class="site-footer">
         <p>&copy; 2026 Cynthia Alexander. All rights reserved.</p>
-        <p>Hubli, Karnataka • cyntalex@gmail.com</p>
+        <p>Hubli, Karnataka, India • cyntalex@gmail.com</p>
     </footer>
 
     <script src="script.js"></script>
